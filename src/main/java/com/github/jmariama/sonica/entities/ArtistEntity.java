@@ -15,10 +15,10 @@ public class ArtistEntity {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
 
-    @Column(name = "NAME", length = 100)
+    @Column(name = "name", length = 100)
     private String name;
 
-    @Column(name = "BIRTHDAY")
+    @Column(name = "birthday")
     private Date releaseDate;
 
 

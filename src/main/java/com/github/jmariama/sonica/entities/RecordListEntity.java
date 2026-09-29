@@ -22,6 +22,6 @@ public class RecordListEntity {
     private String description;
 
     @OneToMany
-    @JoinTable(name = "LIST_RECORD")
+    @JoinTable(name = "list_record")
     private List<RecordEntity> list;
 }

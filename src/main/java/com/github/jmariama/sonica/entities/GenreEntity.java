@@ -12,11 +12,12 @@ public class GenreEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private long id;
 
-    @Column(name = "GENRE", length = 20)
+    @Column(name = "genre", length = 20)
     private String genre;
 
-    @Column(name = "DESC", length = 100)
+    @Column(name = "description", length = 100)
     private String desc;
 
 

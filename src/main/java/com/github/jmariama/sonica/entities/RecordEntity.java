@@ -23,30 +23,30 @@ public class RecordEntity {
     @Column(length = 500)
     private String description;
 
-    @Column(name = "RELEASE_DATE")
+    @Column(name = "release_date")
     private Date releaseDate;
 
-    @Column(columnDefinition = "INT(1)")
+    @Column(columnDefinition = "BOOLEAN")
     private boolean owned;
 
-    @Column(name = "BUY_DATE")
+    @Column(name = "buy_date")
     private Date buyDate;
 
-    @Column(name = "NUM_OF_DISCS")
+    @Column(name = "num_of_discs")
     private int numOfDiscs;
 
     private int size;
     private double speed;
 
     @ManyToOne
-    @JoinColumn(name = "VINYL_TYPE_ID")
+    @JoinColumn(name = "type")
     private VinylTypeEntity type;
 
     @ManyToOne
-    @JoinColumn(name = "GENRE_ID")
+    @JoinColumn(name = "genre")
     private GenreEntity genre;
 
     @OneToMany()
-    @JoinTable(name = "RECORD_ARTIST")
+    @JoinTable(name = "record_artist")
     List<ArtistEntity> artists;
 }
