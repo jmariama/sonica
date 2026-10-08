@@ -4,24 +4,20 @@ import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.NoArgsConstructor;
 
-@Entity
-@NoArgsConstructor
-@AllArgsConstructor
-@Table(name = "genres")
-public class GenreEntity {
+import java.util.Date;
 
+@Entity
+
+@Table(name = "pressings")
+public class PressingsEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
 
-    @Column(name = "genre", length = 20)
-    private String genre;
+    @Column(name = "name", length = 100)
+    private String name;
 
-    @Column(name = "description", length = 100)
-    private String desc;
-
-
-
-
+    @Column(name = "birthday")
+    private Date releaseDate;
 
 }

@@ -38,13 +38,6 @@ public class RecordEntity {
     private int size;
     private double speed;
 
-    @ManyToOne
-    @JoinColumn(name = "type")
-    private VinylTypeEntity type;
-
-    @ManyToOne
-    @JoinColumn(name = "genre")
-    private GenreEntity genre;
 
     @OneToMany()
     @JoinTable(name = "record_artist")

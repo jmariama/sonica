@@ -4,23 +4,19 @@ import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.NoArgsConstructor;
 
-@Entity
-@AllArgsConstructor
-@NoArgsConstructor
-@Table(name = "vinyl_types")
-public class VinylTypeEntity {
+import java.util.Date;
 
+@Entity
+@Table(name = "tracks")
+public class TrackEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
 
-    @Column(name = "type" , length = 100)
-    //33, 45, or 78 are the only allowed inputs
-    private int type;
+    @Column(name = "name", length = 100)
+    private String name;
 
-
-
-
-
+    @Column(name = "birthday")
+    private Date releaseDate;
 
 }
